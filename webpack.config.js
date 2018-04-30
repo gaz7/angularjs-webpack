@@ -30,7 +30,7 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? void 0 : {
-    app: './src/app/app.js'
+    rfq: './src/rfq/rfq.js'
   };
 
   /**
@@ -45,7 +45,7 @@ module.exports = function makeWebpackConfig() {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://0.0.0.0:8080/',
+    publicPath: isProd ? '/' : 'http://localhost:7777/',
 
     // Filename for entry points
     // Only adds hash in build mode
@@ -124,7 +124,10 @@ module.exports = function makeWebpackConfig() {
       // Allow loading html through js
       test: /\.html$/,
       loader: 'raw-loader'
-    }]
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader' }
+    ]
   };
 
   // ISTANBUL LOADER
@@ -218,7 +221,7 @@ module.exports = function makeWebpackConfig() {
   config.devServer = {
     contentBase: './src/public',
     stats: 'minimal',
-    host: '0.0.0.0'
+    host: 'localhost'
   };
 
   return config;

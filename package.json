@@ -1,10 +1,10 @@
 {
-  "name": "angular-webpack-workflow",
-  "version": "1.1.0",
-  "description": "A workflow for Angular made with Webpack",
+  "name": "request-for-quote",
+  "version": "1.0.0",
+  "description": "Exercise in building an Angular component.",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "server": "webpack-dev-server --port 7777 --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
     "start": "npm run server"
@@ -13,14 +13,15 @@
     "type": "git",
     "url": "https://github.com/preboot/angularjs-webpack.git"
   },
-  "author": "Jesus Rodriguez",
+  "author": "Gareth Cole",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/preboot/angularjs-webpack/issues"
   },
   "homepage": "https://github.com/preboot/angularjs-webpack",
   "dependencies": {
-    "angular": "^1.5.0"
+    "angular": "^1.5.0",
+    "moment": "^2.22.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
@@ -35,6 +36,7 @@
     "html-webpack-plugin": "^2.7.1",
     "istanbul-instrumenter-loader": "^1.0.0",
     "jasmine-core": "^2.3.4",
+    "json-loader": "^0.5.7",
     "karma": "^1.1.0",
     "karma-coverage": "^1.0.0",
     "karma-jasmine": "^1.0.2",
