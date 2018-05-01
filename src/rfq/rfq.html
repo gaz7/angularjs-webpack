@@ -1,15 +1,21 @@
 
 <main class="rfq">
-  <h1 class="rfq__title">Request Price</h1>
-  <p class="rfq__historical">
-    <span class="rfq__symbol">{{rfq.symbol}}</span>
-    <span class="rfq__historical-value">{{rfq.historicalVal}}</span>
-    <span class="rfq__date">{{rfq.historicalDate}}</span>
-  </p>
-  <ul class="rfq__button-list">
-    <li ng-repeat="action in rfq.actions">
-      <button class="rfq__btn" ng-click="rfq.changeRange(action)">{{action}}</button>
-    </li>
-  </ul>
-  <p class="rfq__price">{{rfq.indicative}}</p>
+  <div class="rfq__main">
+    <h1 class="rfq__title">Request Price</h1>
+    <p class="rfq__historical">
+      <span class="rfq__symbol">{{rfq.symbol}}</span>
+      <span class="rfq__historical-value">{{rfq.historicalVal}}</span>
+      <span class="rfq__date">{{rfq.historicalDate}}</span>
+    </p>
+    <ul class="rfq__btn-list">
+      <li class="rfq__btn-list-item" ng-repeat="action in rfq.actions">
+        <button class="rfq__btn" ng-click="rfq.changeRange(action)">{{action}}</button>
+      </li>
+    </ul>
+  </div>
+  <div class="rfq__foot">
+    <div class="rfq__foot-content">
+      <span class="rfq__price">{{rfq.indicative}}</span>
+    </div>
+  </div>
 </main>

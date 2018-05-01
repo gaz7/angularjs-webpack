@@ -1,0 +1,16 @@
+@import './variables';
+@import './mixins';
+@import '../rfq/rfq';
+
+/* Base styles here */
+body {
+  color: $text-primary;
+  background-color: $body-bg;
+  font-family: $font-stack-primary;
+  font-size: $font-size-default;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}

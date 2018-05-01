@@ -1,89 +1,39 @@
-# angularjs-webpack
+# UX Code Challenge - Gareth Cole
 
-[![Dependency Status](https://david-dm.org/preboot/angularjs-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angularjs-webpack/dev-status.svg)](https://david-dm.org/preboot/angularjs-webpack#info=devDependencies)
+## Intro
+I've used Angular JS for this exercise, as a chance to get experience with the technology. This is my first time using it, so there will be many places for improvement.
 
-A complete, yet simple, starter for AngularJS using Webpack.
+The project has been built using the [angularjs-webpack](https://github.com/preboot/angularjs-webpack) starter kit. One of the reasons behind this choice was to gain further [Webpack](https://webpack.js.org/) experience.
 
-This workflow serves as a starting point for building AngularJS (1.x) applications using Webpack 2.x. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
+This code is available at https://github.com/gaz7/request-for-quote
 
-* Heavily commented webpack configuration with reasonable defaults.
-* ES6, and ES7 support with babel.
-* Source maps included in all builds.
-* Development server with live reload.
-* Production builds with cache busting.
-* Testing environment using karma to run tests and jasmine as the framework.
-* Code coverage when tests are run.
-* No gulp and no grunt, just npm scripts.
-
->Warning: Make sure you're using the latest version of Node.js and NPM
-
-### Quick start
-
-> Clone/Download the repo then edit `app.js` inside [`/src/app/app.js`](/src/app/app.js)
-
-```bash
-# clone our repo
-$ git clone https://github.com/preboot/angularjs-webpack.git my-app
-
-# change directory to your app
-$ cd my-app
-
-# install the dependencies with npm
-$ npm install
-
-# start the server
-$ npm start
+## Instructions
 ```
-
-go to [http://localhost:8080](http://localhost:8080) in your browser.
-
-# Table of Contents
-
-* [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Running the app](#running-the-app)
-    * [Developing](#developing)
-    * [Testing](#testing)
-* [License](#license)
-
-# Getting Started
-
-## Dependencies
-
-What you need to run this app:
-* `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
-* Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
-
-## Installing
-
-* `fork` this repo
-* `clone` your fork
-* `npm install` to install all dependencies
-
-## Running the app
-
-After you have installed all dependencies you can now run the app with:
-```bash
+git clone git@github.com:gaz7/request-for-quote.git
+npm install
 npm start
 ```
+Application will run at [http://localhost:7777/](http://localhost:7777/)
 
-It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
+To run unit tests:
+```
+npm test
+```
 
-## Developing
+## Notes / Assumptions
+* I have limited Photoshop access, so styling is mostly gained from looking at the png and guessing colors/gradients etc.
+* The Price service would normally be asynchronous getting data via an API call.
+* It was not obvious what should be clicked to toggle the component open/closed, so that functionality has been omitted for now.
+* BEM syntax has been used for CSS
+* No obvious way to make the 'n' button italic just from data, so left for now.
+* Component size is allowed to scale to contents. This assumption is because I don't know the component's context in a larger application.
+* A basic sans-serif font is used for now. Normally a discussion on font stack would be had with the designer.
 
-### Build files
+## Given more time, how would you improve your solution?
+* Two basic unit tests have been added. More would be added with additional time.
+* [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/) would be added with more time for code quality.
+* More time would be spent organising SASS e.g. common variables for gradients
+* More time would be spent on the build process and optimising the production build (eg CSSNano)
 
-* single run: `npm run build`
-* build files and watch: `npm start`
-
-## Testing
-
-#### 1. Unit Tests
-
-* single run: `npm test`
-* live mode (TDD style): `npm run test-watch`
-
-# License
-
-[MIT](/LICENSE)
+## How would you distribute your component to other teams?
+* As I've limited Angular experience, I'm not sure the best way to package components for reuse. I've taken a generic approach of keeping code, style and unit test files associated with this component in the same folder.

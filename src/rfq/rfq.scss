@@ -1,0 +1,63 @@
+/* RFQ Component Specific styles here */
+.rfq {
+  display: inline-block;
+  margin: 0.5rem;
+  font-weight: 800;
+
+  &__main {
+    padding: 0.1875rem;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 0;
+    background-color: $component-bg;
+    background-image: linear-gradient(#ffffff22, #ffffff00 50%);
+    box-shadow: 0 0 1rem 0.25rem $shadow;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0.1875rem;
+  }
+
+  &__historical {
+    margin: 0;
+    padding: 0.1875rem;
+    color: $text-secondary;
+    font-size: $font-size-h5;
+  }
+
+  &__btn-list {
+    margin: 0.1875rem 0;
+    padding: 0.375rem;
+    border-radius: 0.25rem;
+    list-style-type: none;
+    background-color: $btn-bg;
+  }
+
+  &__btn-list-item {
+    display: inline-block;
+  }
+
+  &__btn {
+    @include btn-style();
+  }
+
+  &__foot {
+    display: inline-block;
+    padding: 0 0.1875rem 0.1875rem 0.1875rem;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    background-color: $component-bg;
+  }
+
+  &__foot-content {
+    padding: 0.0625rem;
+    border-radius: 0.125rem;
+    background-color: $btn-bg;
+  }
+
+  &__price {
+    /* this element doesn't seem to be a button, but has the same style */
+    @include btn-style($hoverState: false, $activeState: false);
+    display: inline-block;
+  }
+}

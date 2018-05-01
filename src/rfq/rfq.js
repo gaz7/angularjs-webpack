@@ -1,7 +1,7 @@
 import angular from 'angular';
 import moment from 'moment';
 import price from '../services/price.service';
-import '../style/app.css';
+import '../style/index.scss';
 
 let rfq = () => {
   return {
